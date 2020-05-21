@@ -1,0 +1,194 @@
+body {
+    overflow-x: hidden;
+    background: whitesmoke;
+}
+.wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.wrapper-main {
+    flex: 1;
+}
+.space {
+    flex: 0 0 70px;
+    color: red;
+    height: 100vh;
+}
+
+.background {
+    background-image: url('/images/hostel.jpg');
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.blue {
+    background: navy;
+    width: 100vw;
+    height: 50vh;
+    position: fixed;
+    opacity: 1;
+    z-index: -10;
+}
+
+header {
+    list-style: none;
+    margin-top: 30px;
+
+}
+
+.main-nav__items { 
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.main-nav__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1;
+    background: rgb(255, 255, 255, 0.2);
+    font-size: 18px;
+    margin: 0 15px;
+    color: white;
+    border-radius: 30px;
+    padding: 5px 30px;
+
+}
+.main-nav__item a{
+    text-decoration: none;
+    color: inherit;
+}
+.btn-ctn {
+    background: rgba(255, 255, 255, 0);
+    border: 1px white solid;
+}
+.main-nav__item i {
+    vertical-align: middle;
+    background: rgba(255, 255, 255, 1);
+    color: black;
+    font-size: 15px;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.filters {
+    position: absolute;
+    top: 30px ;
+    height: 80vh;
+    width: 250px;
+    background: rgb(2, 2, 44);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content {
+    position: relative;
+    left: 280px;
+    top: 30vh;
+    margin-right: 280px;
+    background: white;
+    padding: 30px;
+    border-radius: 40px;
+
+}
+
+.content h1 {
+    font-size: 45px;
+}
+
+.logo {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+
+.logo i {
+    vertical-align: top;
+}
+
+.filter__items {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    justify-content: center;
+}
+.filter__items h2 {
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+.filter__item {
+    font-size: 18px;
+    list-style: none;
+    color: white;
+    padding: 10px 20px;
+    padding-left: 0;
+    margin: 10px 0;
+}
+.filter__item i{
+    vertical-align: bottom;
+    color: goldenrod;
+}
+
+.cards {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    border-radius: 10px;
+    width: 300px;
+    margin: 15px;
+    background: whitesmoke;
+}
+
+.card img {
+    border-radius: 10px 10px 0 0 ;
+    width: 300px;
+    background-size: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+.card-content h3 {
+    margin: 10px 0;
+    font-weight: 400;
+}
+.rating i {
+    color: green;
+}
+
+.footer {
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    background: rgb(2, 2, 44);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer h1 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+.footer h1 i {
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+
+
