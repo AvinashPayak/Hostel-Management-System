@@ -44,6 +44,14 @@ body {
     font-weight: 800;
     color: var(--primary);
 }
+.main-nav-logo p {
+    display: inline-block ;
+    vertical-align: middle;
+}
+.main-nav-logo i {
+    font-size: 40px;
+    vertical-align: top;
+}
 .main-nav__items {
     display: flex;
     align-items: center;
@@ -65,7 +73,7 @@ a {
     border-radius: 20px;
     box-shadow: var(--shadow);
 }
-/* footer {
+footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,4 +94,4 @@ footer h3 {
 footer h3 i {
     font-size: 5px;
     vertical-align: middle;
-} */
+}

@@ -10,7 +10,7 @@ body {
 .section-one {
     flex: 0 0 1366px;
     display: flex;
-    margin: 0 20px;
+    margin: 20px;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
@@ -54,16 +54,19 @@ body {
     margin: 0 10px;
     border-radius: 40px;
     font-size: 18px;
+    box-shadow: var(--shadow);
 }
 .section-one__button i {
     vertical-align: top;
     font-size: 20px;
     margin-left: 5px;
+    
 }
 .section-one-btn-ctn {
     background: white;
     border: 2px solid var(--primary);
     color: var(--primary);
+    box-shadow: none;
 }
 .section-two {
     display: block;
@@ -85,7 +88,7 @@ body {
     background: var(--primary);
     color: white;
     height: auto;
-    margin: 0;
+    margin: 0 20px;
 }
 .section-two h1 {
     font-size: 45px;
@@ -101,14 +104,17 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
-.section-three {
-    margin-top: 100px ;
-}
+
 .section-two-images img {
     width: 300px;
     margin: 20px 20px 0 0;
 }
+
+.section-three {
+    margin-top: 100px ;
+}
 .section-three-wrapper {
+    margin: 0 20px;
     display: flex;
 }
 .section-three-content {
@@ -131,7 +137,7 @@ body {
 
 .section-three-form {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 20px 0;
     border-radius: 5px;
   }
   .section-three-form label {
@@ -163,8 +169,7 @@ body {
     width: auto;
     text-transform: uppercase;
     cursor: pointer;
+    box-shadow: var(--shadow);
+
     transition: 0.3s background ease;
-  }
-  #sendBtn:hover {
-    background: #3498db;
   }
