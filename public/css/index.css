@@ -66,7 +66,8 @@ body {
     color: var(--primary);
 }
 .section-two {
-    height: 100vh;
+    display: block;
+    height: 100%;
 }
 .section-two-background {
     background: var(--primary);
@@ -91,16 +92,79 @@ body {
 
 }
 .section-two svg {
-    margin-bottom: -1px;
+    margin-bottom: -lpx solid var(--primary);
     display: block;
 }
 
 .section-two-images{
+    margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
 }
+.section-three {
+    margin-top: 100px ;
+}
 .section-two-images img {
     width: 300px;
-    margin: 20px;
+    margin: 20px 20px 0 0;
+}
+.section-three-wrapper {
+    display: flex;
+}
+.section-three-content {
+    margin-top: 50px;
+    flex: 0 0 1366px;
+}
+.section-three-content h1 {
+    font-size: 45px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+.section-three-content p {
+    font-size: 22px;
 }
 
+.section-three-space {
+    flex: 1;
+}
+
+
+.section-three-form {
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 5px;
+  }
+  .section-three-form label {
+    display: block;
+    padding: 1rem 0 0.25rem;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  .section-three-form input,
+  .section-three-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+    opacity: 1;
+  }
+.section-three-form input:focus,
+.section-three-form textarea:focus {
+    border-bottom: 1px solid red;  
+}
+  #sendBtn {
+    margin: 50px 0;
+    border: 0;
+    background: var(--primary);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    width: auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s background ease;
+  }
+  #sendBtn:hover {
+    background: #3498db;
+  }
