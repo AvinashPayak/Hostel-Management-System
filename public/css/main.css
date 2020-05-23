@@ -1,5 +1,8 @@
+/* General CSS */
 :root {
-    --primary: rgb(25, 7, 82) ;
+    --background: #F7FDF6;
+    --backgorund-dark: #E2E6E0
+    --secondary: #8D021F;
     --shadow: 3px 3px 10px rgb(53, 53, 156);
 }
 * {
@@ -7,91 +10,56 @@
     margin: 0;
     padding: 0;
 }
-input:focus, textarea:focus, select:focus{
-    outline: none;
+h1 {
+    font-size: 45px;
 }
-input, textarea {
-    border: 0px solid black;
-
-}
-button {
-    text-decoration: none;
-    border: none;
-    background: white;
-}
-body {
-    font-family: 'Oswald', sans-serif;
-    overflow-x: hidden;
-}
-.nav-wrapper {
-    display: flex;
-}
-.nav-space{
-    flex: 1;
-}
-
-.main-nav {
-    flex: 0 0 1366px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    border-bottom: 2px solid rgb(233, 230, 230);
-}
-.main-nav-logo{
-    font-family: 'Sacramento', cursive;
-    font-size: 30px;
-    font-weight: 800;
-    color: var(--primary);
-}
-.main-nav-logo p {
-    display: inline-block ;
-    vertical-align: middle;
-}
-.main-nav-logo i {
-    font-size: 40px;
-    vertical-align: top;
-}
-.main-nav__items {
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-.main-nav__item {
+p {
     font-size: 18px;
-    margin: 0 10px;
-
 }
 a {
     text-decoration: none;
     color: inherit;
+    font-size: 18px;
 }
-.btn-ctn {
-    background: var(--primary);
-    color: white;
-    padding: 5px 20px;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
+body {
+    background: var(--background);
+    font-family: 'oswald';
 }
-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-   position: relative;
-    background: var(--primary);
-    bottom: 0;
-    width: 100%;
-    height: 200px;
-}
-footer p {
+
+/* Header Start */
+/* Navigation Start */
+header {
+    position: sticky;
+    top: 0;
+    background: var(--background);
     margin: 10px 0;
 }
-footer h3 {
-    font-weight: 400;
+.nav-wrapper {
+    display: flex;
 }
-footer h3 i {
-    font-size: 5px;
+.nav-space {
+    flex: 1;
+}
+.main-nav {
+    flex: 0 0 1300px;
+    display: flex;
+    justify-content: space-between;
+}
+.main-nav-logo p {
+    text-transform: uppercase;
     vertical-align: middle;
 }
+.main-nav-logo i {
+    color: #8D021F;
+    vertical-align: top;
+}
+.main-nav__items{
+    list-style: none;
+    display: flex;
+}
+.main-nav__item {
+    margin: 0 10px;
+}
+/* Navigation End */
+/* Header End */
+
