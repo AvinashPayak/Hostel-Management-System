@@ -28,8 +28,8 @@
     flex: 1;
 }
 .section-one {
-    height: 90vh;
-    margin: 50px 0;
+    height: 80vh;
+    margin: 30px 0 100px 0;
     flex: 0 0 1300px;
     display: flex;
 }
@@ -82,7 +82,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 5vh;
 }
 .section-one__buttons{
     margin: 30px 0;
@@ -112,22 +111,23 @@
 .section-two-content {
     flex: 0 0 1300px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 .section-two-content h1 {
     order: 2;
-    flex: 1;
     font-size: 150px;
+    text-align: center;
     line-height: 1;
     text-transform: uppercase;
 }
 .section-two__cards {
     order: 1;
-    flex: 1.2;
+    flex: 0 0 500px;
 }
 .section-two__card {
     width: 400px;
-    margin: 30px 20px;
+    margin: 30px 0;
 }
 .section-two__card h2 {
     font-size: 45px;
@@ -142,4 +142,101 @@
 
 }
 /* Section Two End */
+/* Section Three Start */
+.section-three-wrapper{
+    display: flex;
+}
+.section-three-space {
+    flex: 1;
+}
+.section-three-content {
+    height: 90vh;
+    flex: 0 0 1300px;
+}
+.section-three-content h1 {
+    text-align: center;
+    font-size: 150px;
+}
+
+.section-three__cards{
+    margin: 30px 0;
+    justify-content: space-around;
+    display: flex;
+}
+.section-three__card {
+    margin: 0 20px;
+    width: 350px;
+    padding: 20px;
+    border-top: 2px black solid;
+    border-left: 2px black solid;
+}
+.section-three__card h2 {
+    font-weight: 500;
+    font-size: 35px;
+
+}
+.section-three__card i{
+    margin:10px 0;
+    font-size: 40px;
+    color: #8D021F;
+
+}
+.section-three__card h3{
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 400;
+}
+/* Section Three End */
+/* Section Four Start */
+.section-four-wrapper{
+    display: flex;
+}
+.section-four-space {
+    flex: 1;
+}
+.section-four-content{
+    flex: 0 0 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-four-content h1 {
+    font-size: 150px;
+}
+.section-four-content p {
+    font-size: 30px;
+}
+.section-four-text {
+    flex: 1.5;
+}
+.form-wrapper {
+    flex: 0 0 600px;
+    display: flex;
+    justify-content: flex-start;
+}
+.section-four-form {
+    width: 600px;
+    margin: 50px 0;
+    padding: 30px;
+    border-top: 2px black solid;
+}
+.section-four-form input,textarea{
+    margin-bottom: 20px;
+    display: block;
+    width: 80%;
+    height: 40px;
+    border: 1px black solid;
+    background: #F7FDF6;
+}
+.section-four-form label{
+    font-size: 25px;
+}
+.section-four-form button {
+    margin: 20px 0;
+    padding: 10px 30px;
+    font-size: 30px;
+    border: 2px solid black;
+
+}
+/* Section Four End */
 /* Main End */
