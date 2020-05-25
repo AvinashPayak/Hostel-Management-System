@@ -1,17 +1,35 @@
 const path = require('path');
 
-const db = require('./util/database');
-
 const express = require('express');
 const app = express();
+
 const bodyParser = require('body-parser');
-
-const mainRoutes = require('./routes/main');
-
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.static(path.join(__dirname, 'public')));
+
+const sequelize = require('./util/database');
+const studentModel = require('./models/student');
+
+//Link static files
+app.use(express.static(path.join(__dirname, 'public'))); 
+
+//Routes
+const mainRoutes = require('./routes/main'); 
+const userRoutes = require('./routes/user');
+const adminRoutes = require('./routes/admin');
+
+
 
 app.use(mainRoutes.routes);
+app.use('/user',userRoutes.routes);
 
-
-app.listen(3000);
+sequelize
+  .sync({
+      logging: console.log 
+  })
+  .then(result => {
+    //   console.log(result);
+    app.listen(3000);
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  })
