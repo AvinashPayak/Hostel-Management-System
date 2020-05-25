@@ -12,6 +12,10 @@ const studentModel = require('./models/student');
 //Link static files
 app.use(express.static(path.join(__dirname, 'public'))); 
 
+// EJS templating engine
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+
 //Routes
 const mainRoutes = require('./routes/main'); 
 const userRoutes = require('./routes/user');

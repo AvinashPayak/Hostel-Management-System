@@ -223,6 +223,8 @@
 .section-four-form input,textarea{
     margin-bottom: 20px;
     display: block;
+    font-size: 20px;
+    padding: 5px;
     width: 80%;
     height: 40px;
     border: 1px black solid;

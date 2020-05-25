@@ -12,11 +12,13 @@ exports.getGallery =  (req, res, next) => {
 };
 
 exports.getIndex = (req, res, next) => {
-    res.sendFile(path.join(__dirname, '..', 'views', 'index.html'));  
+    // res.sendFile(path.join(__dirname, '..', 'views', 'index.html'));  
+    res.render('index');
 };
 
 exports.postIndex = (req, res, next) => {
-    res.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
+    // res.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
+    res.render('index');
     const firstName = req.body.firstname;
     const lastName = req.body.lastname;
     const gender = req.body.gender;
