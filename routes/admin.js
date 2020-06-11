@@ -1,8 +1,8 @@
-// const express = require('express')
-// const router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-// router.get('/userHome', (req, res, next) => {
-//     res.sendFile(__dirname, '..', 'views', 'user-home.html' )
-// })
+router.get('/login', (req, res, next) => {
 
-// exports.routes = router
+});
+
+module.exports = router;
