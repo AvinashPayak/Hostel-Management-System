@@ -6,3 +6,5 @@ const pool = database.createPool({
     database: 'hostel',
     password: 'Avinash'
 });
+
+module.exports = pool.promise();

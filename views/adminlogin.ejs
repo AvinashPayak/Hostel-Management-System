@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/adminlogin.css">
+</head>
+<body>
+    <!-- Header Start -->
+ <header>
+    <nav class="nav-wrapper">
+        <div class="nav-space"></div>
+        <div class="main-nav">
+            <div class="main-nav-logo">
+                <a href="/"><p><i class="material-icons">location_city</i> Gemini Hostel Management system</p></a>
+            </div>
+            <div class="main-nav-content">
+                
+                <ul class="main-nav__items">
+                    <li class="main-nav__item"><a href="">About</a></li>
+                    <li class="main-nav__item"><a href="">Gallery</a></li>
+                    <li class="main-nav__item"><a href="">User Registration</a></li>
+                    <li class="main-nav__item"><a href="/login">User Login</a></li>
+                    <li class="main-nav__item btn-ctn"><i class="material-icons">security</i><a href="/admin/login"> Admin Login</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="nav-space"></div>
+    </nav>
+</header>
+<!-- Header End -->
+<main>
+    <section class="section-one">
+        <div class="section-content-wrapper">
+            <div class="section-space-one"></div>
+            <div class="section-content-one">
+                <h1>Admin Login</h1>
+            </div>
+            <div class="section-content-two">
+                <div class="form-wrapper">
+                    <form class="section-one-form" action="/admin/login" method="POST">
+
+                        <label for="email">Username</label>
+                        <input type="text" id="text" name="username">
+                        
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name = "password">                            
+                        
+                        <button type="submit">Login</button>
+                                                    
+                      </form>
+
+                </div>
+            </div>
+            <div class="section-space-two"></div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <h3>Hostel Management System <i class="material-icons">copyright</i></h3>
+    <p>Avinash Payak</p>
+    <p>avinashpayak@gmail.com</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* Sections Start */
+main {
+    height: 100vh;
+}
+section {
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.section-content-wrapper {
+    display: flex;
+}
+.section-space {
+    flex: 1;
+}
+.section-content {
+    flex: 0 0 1300px;
+}
+
+
+/* Section one Start */
+.section-one {
+
+}
+.section-one .section-content {
+    background: white;
+    border-left: 6px solid #8D021F;
+    padding: 20px 10px;
+    box-shadow: 3px 2px 2px lightgrey;
+}
+.rooms-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.rooms-content > div {
+    text-align: center;
+}
+.rooms-content h2 {
+    font-size: 30px;
+}
+.rooms-content h5 {
+    font-size: 20px;
+}
+.rooms h2{
+    color: black;
+}
+.occupied h2 {
+    color: #8D021F;
+}
+.vacancy h2 {
+    color: green;
+}
+/* Section one end */
+/* Section two Start */
+.section-two {
+
+}
+.section-two .section-content {
+    display: flex;
+    justify-content: space-between;
+}
+.students, .notices, .lafs {
+    background: white;
+    width: 400px;
+    border-top: #8D021F 5px solid;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 3px 2px 2px lightgrey;
+    color: rgb(47, 47, 47);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-two .section-content h3 {
+    color: #8D021F;
+    font-size: 25px;
+    font-weight: 400;
+}
+/* Section two end */
+/* Section three Start */
+.section-three {
+
+}
+.section-three .section-content {
+    display: flex;
+    justify-content: space-between;
+}
+ .student, .notice, .laf {
+    background: white;
+    width: 400px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 3px 2px 2px lightgrey;
+    color: rgb(47, 47, 47);
+    height: 60vh;
+
+}
+.section-three .section-content h3 {
+    color: #8D021F;
+    font-size: 25px;
+    font-weight: 400;
+}
+/* Section three end */
+/* Sections Send */

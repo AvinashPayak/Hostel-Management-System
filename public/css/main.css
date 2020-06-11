@@ -1,0 +1,103 @@
+/* General CSS */
+:root {
+    --background: #F7FDF6;
+    --backgorund-dark: #E2E6E0;
+    --secondary: #8D021F;
+    --shadow: 3px 3px 10px rgb(53, 53, 156);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 45px;
+    color: #8D021F;
+}
+p {
+    font-size: 18px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    cursor: pointer;
+}
+button {
+    border: none;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+}
+body {
+    background: var(--background);
+    font-family: 'oswald';
+}
+ul {
+    list-style: none;
+}
+/* Header Start */
+/* Navigation Start */
+header {
+    /* position: sticky;
+    top: 0; */
+    background: var(--background);
+    margin: 10px 0;
+}
+.nav-wrapper {
+    display: flex;
+}
+.nav-space {
+    flex: 1;
+}
+.main-nav {
+    flex: 0 0 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-nav-logo p {
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-size: 20px;
+}
+.main-nav-logo i {
+    color: #8D021F;
+    font-size: 30px;
+    vertical-align: top;
+}
+.main-nav__items{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.main-nav__item {
+    text-transform: uppercase;
+    margin: 0 10px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.btn-ctn{
+    background: #8D021F;
+    color: var(--background);
+    padding: 5px 10px;
+    border-radius: 5px;
+    vertical-align: top;
+}
+.main-nav__item i {
+    font-size: 25px;
+    vertical-align: top;
+}
+/* Navigation End */
+/* Header End */
+/* Footer Start */
+footer {
+    width: 100%;
+    text-align: center;
+    background: #8D021F;
+    padding: 30px 0;
+}
+footer i {
+    vertical-align: bottom;
+}
+/* Footer End */

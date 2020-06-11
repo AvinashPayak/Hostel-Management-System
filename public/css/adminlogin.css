@@ -1,0 +1,76 @@
+/* Sections Start */
+
+section {
+    margin: 100px 0;
+}
+
+/* Section one Start */
+
+.section-one .section-content-wrapper {
+    display: flex;
+}
+.section-one .section-space-one {
+    flex: 1;
+}
+.section-one .section-space-two {
+    flex: 1;
+}
+.section-one .section-content-one {
+    flex: 0 0 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 1px dotted black; */
+}
+.section-one .section-content-one h1 {
+    font-size: 150px;
+    line-height: 1;
+}
+.section-one .section-content-one p {
+    font-size: 30px;
+}
+.section-one .section-content-one span {
+    color: darkred;
+}
+.section-one .section-content-two {
+    height: 90vh;
+    flex: 0 0 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 1px dotted black; */
+}
+
+
+
+.section-one-form {
+    width: 600px;
+    margin: 50px 0;
+    padding: 30px;
+}
+.section-one-form input,textarea{
+    margin-bottom: 20px;
+    display: block;
+    font-size: 20px;
+    padding: 5px;
+    width: 80%;
+    height: 40px;
+    border: 1px black solid;
+    background: #F7FDF6;
+}
+.section-one-form label{
+    font-size: 25px;
+}
+.section-one-form button {
+    margin: 20px 0;
+    padding: 10px 30px;
+    font-size: 30px;
+    border: 2px solid black;
+
+}
+/* Section one end */
+/* Sections end */
