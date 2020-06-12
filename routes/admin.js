@@ -9,4 +9,6 @@ router.post('/login', adminController.postLogin)
 
 router.get('/home', adminController.getHome);
 
+router.post('/logout', adminController.postLogout)
+
 module.exports = router;

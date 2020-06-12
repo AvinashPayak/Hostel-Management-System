@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+button {
+    border: none;
+    background: white;
+    cursor: pointer;
+}
+main {
+    height: 100vh;
+}
+/* Sections Start */
+
+section {
+    margin:  0;
+}
+.section-content-wrapper {
+    display: flex;
+}
+.section-space-one {
+    background: #2a272a;
+
+    flex: 1;
+}
+.section-space-two {
+    flex: 1;
+}
+.section-one .section-content-one {
+    background: #2a272a;
+    flex: 0 0 650px;
+    /* border: 1px dotted black; */
+}
+
+/* Section one Start */
+.section-one {
+
+}
+.section-one .section-content-one, .section-content-two {
+    padding: 10px 0;
+
+}
+.section-one .section-content-one {
+    color: white;
+    line-height: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10px;
+    align-items: center;
+}
+
+.section-one .section-content-one h1 {
+    color: white;
+    font-size: 65px;
+    margin: 10px 0;
+    
+}
+
+.section-one .section-content-one ul {
+    padding:0 10px;
+    width: 180px;
+}
+.section-one .section-content-one li {
+    margin-bottom: 35px;
+    font-size: 20px;
+    color: lightgray;
+    cursor: pointer;
+
+    transition: 0.1s ease;
+}
+.section-one .section-content-one i {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+
+}
+.section-one .section-content-one li:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.section-one .section-one .section-content-one h2 {
+    font-size: 35px;
+}
+
+.view-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.view-details button {
+    padding: 15px 35px;
+    color: white;
+    background: inherit;
+    font-size: 22px;
+    border: 3px white solid;
+
+    transition: 0.1s ease;
+}
+.view-details button:hover {
+    border-radius: 30px;
+}
+
+
+.section-content-two {
+    flex: 0 0 650px;
+    display: flex;
+    /* border: 1px dotted black; */
+}
+.space {
+    flex: 3;
+    margin: 5px 0;
+    text-align: center;
+    padding: 10px 15px;
+}
+.space ul {
+    display: flex;
+    justify-content: flex-end;
+}
+.space li {
+    padding: 5px 20px;
+    font-size: 22px;
+}
+.space li:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.options {
+    flex: 1;
+}
+.options {
+    margin: 5px 0;
+    text-align: center;
+    padding: 10px 15px;
+}
+.options button {
+    font-size: 22px;
+    background: inherit;
+    border: 3px solid black;
+    padding: 5px 35px;
+
+    transition: 0.1s ease;
+}
+.options button:hover {
+    border-radius: 30px;
+}
+.options li {
+    margin: 15px 0;
+    padding: 6px 0;
+    text-align: center;
+    font-size: 22px;
+
+    transition: 0.1s ease;
+}
+.options li:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+/* Section one end */
+
+/* Section Two Start */
+.section-two {
+    margin: 50px 0;
+}
+.section-two .section-content-one {
+    flex: 0 0 1000px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.section-two .section-content-one h1{
+    text-align: center;
+    font-size: 60px;
+    padding-right:60px ;
+    color: #2a272a;
+}
+.section-space {
+    flex: 1;
+}
+.notice {
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+}
+.notice p{
+    text-transform: uppercase;
+    font-size: 22px;
+    margin: 0 5px;
+    color: grey;
+    text-align: center;
+
+    transition: 0.1s ease;
+}
+
+.notice:hover p{
+    transform: scale(1.1);
+    cursor: pointer;
+    color: black;
+}
+/* Section Two End */
+/* Sections end */

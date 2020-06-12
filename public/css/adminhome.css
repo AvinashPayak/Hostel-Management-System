@@ -23,21 +23,31 @@ section {
 
 }
 .section-one .section-content {
-    background: white;
     border-left: 6px solid #8D021F;
     padding: 20px 10px;
-    box-shadow: 3px 2px 2px lightgrey;
+    box-shadow: 3px 2px 15px grey;
+    background: rgba(255, 255, 255, 0.5);
 }
 .rooms-content {
+    border-right: #8D021F 5px solid;
     display: flex;
+    padding: 5px 15px;
+    padding-right: 50px ;
     align-items: center;
-    justify-content: space-around;
+    width: 700px;
+    justify-content: space-between;
 }
 .rooms-content > div {
     text-align: center;
 }
+.rooms-content > h1 {
+    padding: 5px 10px;
+    border: #8D021F 2px solid;
+    border-radius: 10px;
+    font-size: 25px;
+}
 .rooms-content h2 {
-    font-size: 30px;
+    font-size: 25px;
 }
 .rooms-content h5 {
     font-size: 20px;
@@ -61,12 +71,12 @@ section {
     justify-content: space-between;
 }
 .students, .notices, .lafs {
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
     width: 400px;
     border-top: #8D021F 5px solid;
     padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 3px 2px 2px lightgrey;
+    box-shadow: 3px 2px 15px grey;
     color: rgb(47, 47, 47);
     display: flex;
     justify-content: space-between;
@@ -87,19 +97,24 @@ section {
     justify-content: space-between;
 }
  .student, .notice, .laf {
-    background: white;
     width: 400px;
-    padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 3px 2px 2px lightgrey;
     color: rgb(47, 47, 47);
     height: 60vh;
-
+    overflow-y: auto;
 }
 .section-three .section-content h3 {
     color: #8D021F;
     font-size: 25px;
     font-weight: 400;
+}
+.student-box {
+    background: rgba(255, 255, 255, 0.7);
+    margin-right: 5px;
+    margin-bottom: 3px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 3px 2px 2px lightgrey;
 }
 /* Section three end */
 /* Sections Send */

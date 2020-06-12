@@ -44,6 +44,7 @@
 .section-one-content h2 {
     text-transform: uppercase;
     font-size: 60px;
+    color: #333333;
     line-height: 1;
 }
 .section-one-content h3 i {
@@ -52,6 +53,7 @@
 }
 .section-one-content h3 {
     margin-top: 20px;
+    color: #333333;
     text-transform: uppercase;
     font-size: 50px;
     line-height: 1;

@@ -5,7 +5,6 @@ module.exports = class Admins {
         this.username = username;
         this.password = password;
     }
-
     auth(){
         return db.execute('SELECT COUNT(*) AS present FROM admins WHERE username = ? AND password = ?', [this.username, this.password]);
     }

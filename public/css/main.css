@@ -30,7 +30,10 @@ button {
     cursor: pointer;
 }
 body {
-    background: var(--background);
+    /* background: var(--background); */
+    color: #333333;
+    
+    background: url('../images/texture.jpg');
     font-family: 'oswald';
 }
 ul {
@@ -41,7 +44,8 @@ ul {
 header {
     /* position: sticky;
     top: 0; */
-    background: var(--background);
+    /* background: var(--background); */
+    background: url('../images/texture.jpg');
     margin: 10px 0;
 }
 .nav-wrapper {
@@ -94,8 +98,9 @@ header {
 footer {
     width: 100%;
     text-align: center;
-    background: #8D021F;
+    background: #2a272a;
     padding: 30px 0;
+    color: white ;
 }
 footer i {
     vertical-align: bottom;
