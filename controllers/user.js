@@ -18,9 +18,7 @@ exports.postLogin = (req, res, next) => {
                 req.session.emailid=email;
                 req.session.firstname = studentdetail[0].fname
                 req.session.lastname = studentdetail[0].lname
-                console.log(req.session.lastname)
                 req.session.save(err => {
-                    console.log(err);
                     res.redirect('/userhome');
                 }) 
             }).catch(err => {
@@ -71,14 +69,20 @@ exports.getReviews = (req, res, next) => {
     }).catch()
 }
 exports.postReviews = (req, res, next) => {
-    res.redirect('/reviews');
+    const review = req.body.review;
+    const rating = req.body.rating;
+    const addreview = new Reviews(req.session.regid, review, rating, req.session.firstname, req.session.lastname);
+    addreview.addReview().then(() => {
+        res.redirect('/reviews')
+    }).catch(err => {
+        console.log(err)
+    })
 }
 
 exports.getUserHome = (req, res, next) => {
     Students.findByMail(req.session.emailid).then(([student]) => {
         req.session.regid = student[0].registrationid;
         Notices.findAll().then(([notices]) => {
-            // console.log(notices);
             res.render('userhome', {
                 student: student[0],
                 notices: notices

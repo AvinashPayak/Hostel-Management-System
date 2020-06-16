@@ -148,7 +148,7 @@ section {
 .options button {
     font-size: 22px;
     background: inherit;
-    border: 3px solid black;
+    border: 2px solid black;
     padding: 5px 35px;
 
     transition: 0.1s ease;

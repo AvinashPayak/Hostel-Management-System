@@ -20,4 +20,6 @@ module.exports = class notices {
         return db.execute('SELECT * FROM notices where noticeid = ?', [id]);
     }
 
+  
+
 }

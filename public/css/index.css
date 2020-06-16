@@ -152,6 +152,7 @@
     flex: 1;
 }
 .section-three-content {
+ 
     height: 90vh;
     flex: 0 0 1300px;
 }
@@ -162,12 +163,17 @@
 
 .section-three__cards{
     margin: 30px 0;
-    justify-content: space-around;
     display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 1300px;
+    padding: 100px;
+    
 }
 .section-three__card {
     margin: 0 20px;
-    width: 350px;
+    flex: 0 0 350px;
     padding: 20px;
     border-top: 2px black solid;
     border-left: 2px black solid;
