@@ -43,9 +43,9 @@
             <div class="section-space-one"></div>
             <div class="section-content-one">
                 <div>
-                    <h3>Registration ID: dsfsge</h3>
-                <h1>Avinash Payak</h1>
-                <h2>Ramrao Adik Institute Of Technology</h2>
+                    <h3>Registration ID: <%=student.registrationid %></h3>
+                <h1><%= student.fname %> <%= student.lname %></h1>
+                <h2><%= student.college %></h2>
                 </div>
                 <div class="view-details">
                     <ul>
@@ -65,10 +65,12 @@
                     </ul>
                 </div>
                 <div class="options">
-                    <button>Logout</button>
+                    <form action="/logout" method='POST'>
+                        <button type="submit">Logout</button>
+                    </form>
                     <ul>
                         
-                        <li>Reviews</li>
+                        <li><a href="/reviews">Reviews</a></li>
                         <li>Hostel Rules</li>
                         <li>Mess Timetable</li>
                     </ul>
@@ -84,21 +86,15 @@
                 <div class="section-content-one">
                     <h1>Notice Board</h1>
                     <!-- <h1>No Notices</h1> -->
-                    <div class="notice">
-                        <p>1</p>
-                        <p>Mess Timings have Changed</p>
-                        <p>12/6/2020</p>
-                    </div>
-                    <div class="notice">
-                        <p>2</p>
-                        <p>water pump is broken will be fixed in 100 days niggas wassup</p>
-                        <p>12/6/2020</p>
-                    </div>
-                    <div class="notice">
-                        <p>3</p>
-                        <p>Holidays from july</p>
-                        <p>12/6/2020</p>
-                    </div>
+                    <% let i = 1; for(const notice of notices) {  %>
+                    <a href="/userhome/notice/<%= notice.noticeid %>">
+                        <div class="notice">
+                            <p><%= i %></p>
+                            <p><%= notice.subject %></p>
+                            <p><%= (notice.noticedate).toString().split('G')[0] %></p>
+                        </div>  
+                    </a>
+                    <% i++; } %>
                 </div>
                 <div class="section-space"></div>
             </div>

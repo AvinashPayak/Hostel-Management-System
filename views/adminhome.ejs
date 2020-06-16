@@ -37,8 +37,6 @@
                     <ul class="main-nav__items">
                         <li class="main-nav__item"><a href="">About</a></li>
                         <li class="main-nav__item"><a href="">gallery</a></li>
-                        <li class="main-nav__item"><a href="">User Registration</a></li>
-                        <li class="main-nav__item"><a href="/login">User Login</a></li>
                         <li class="main-nav__item "><form action="/admin/logout" method="POST">
                         <button class="btn-ctn" type="submit"><i class="material-icons">security</i> LOGOUT</button>
                         </form></li>
@@ -90,11 +88,11 @@
                 <div class="section-content">
                    <div class="students">
                     <h2>students</h2>
-                    <h3><%= count %></h3>
+                    <h3><%= studentcount %></h3>
                    </div>
                    <div class="notices">
                     <h2>Notice</h2>
-                    <h3>30</h3>
+                    <h3><%= noticecount %></h3>
                    </div>
                    <div class="lafs">
                        <h2>lost and found</h2>
@@ -117,7 +115,12 @@
                     <% } %>
                    </div>
                    <div class="notice">
-                    
+                    <% for (let notice of notices) { %>
+                        <div class="student-box">
+                            <h3><%= notice.subject %></h3>
+                            <h4><%= notice.noticedate.toString().split('G')[0] %></h4>
+                        </div>
+                        <% } %>
                    </div>
                    <div class="laf">
                        

@@ -1,5 +1,6 @@
 const Admin = require('../models/admin');
 const Student = require('../models/students');
+const Notice = require('../models/notices');
 
 exports.getLogin =  (req, res, next) => {
     console.log(req.session.isLoggedIn)
@@ -38,16 +39,26 @@ exports.postLogout = (req, res, next) => {
 
 exports.getHome = (req, res, next) => {
     Student.findAll().then(([students]) => {
-        Student.totalCount().then(([count]) => {
-            if(!req.session.isLoggedIn){
-                res.render('index')
-            }
-            else {
-                res.render('adminhome', {
-                    students: students,
-                    count: count[0].totalcount
+        Student.totalCount().then(([studentcount]) => {
+            Notice.findAll().then(([notices]) => {
+                Notice.totalCount().then(([noticecount]) => {
+                    if(!req.session.isLoggedIn){
+                        res.render('index')
+                    }
+                    else {
+                        res.render('adminhome', {
+                            students: students,
+                            studentcount: studentcount[0].totalcount,
+                            notices: notices,
+                            noticecount: noticecount[0].totalcount
+                    })
+                    }
+                }).catch(err => {
+                    console.log(err);
+                })
+            }).catch(err => {
+                console.log(err);
             })
-            }
         });
     }).catch(err => {
         console.log(err)

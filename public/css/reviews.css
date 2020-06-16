@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+/* Sections Start */
+main {
+    min-height: 100vh;
+}
+section {
+    padding: 50px 0;
+}
+
+.section-content-wrapper {
+    display: flex;
+}
+.section-space {
+    flex: 1;
+}
+.section-content {
+    flex: 0 0 1000px;
+}
+
+nav button {
+    font-size: 22px;
+    background: inherit;
+    border: 2px solid black;
+    padding: 5px 35px;
+
+    transition: 0.1s ease;
+}
+nav button:hover {
+    border-radius: 30px;
+}
+/* Section one Start */
+.add-review {
+    padding: 20px 50px;
+    display: flex;
+    box-shadow: 3px 5px 20px #00000029;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.5s ease;
+
+}
+
+.add-review:hover {
+    transform: scale(1.01);
+    border-radius: 80px;
+
+}
+.add-review i {
+    font-size: 50px;
+    transition: 0.5s ease;
+}
+.add-review:hover i{
+    transform: rotate(180deg);
+}
+
+.reviews {
+    margin: 50px 0;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    cursor: pointer;
+    text-align: left;
+    padding: 30px 20px;
+    flex: 0 0 300px;
+    box-shadow: 3px 5px 20px #00000029;
+    vertical-align: middle;
+    margin: 30px 0;
+/* Animation */
+    transition: 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 3px 8px 20px #00000029;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: 500;
+    padding: 0 10px;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.card span{
+    padding: 10px 0;
+    display: block;
+}
+.card i {
+    font-size: 30px;
+}
+.card p {
+    font-size: 25px;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Charm', cursive;
+
+}
+/* Section one end */
+
+/* Sections Send */

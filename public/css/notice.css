@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    color: white;
+}
+h1 {
+    font-size: 75px;
+    font-weight: 400;
+
+}
+h2 {
+    font-size: 45px;
+    font-weight: 400;
+}
+h3 {
+    font-size: 30px;
+    font-weight: 400;
+}
+.section-content .material-icons {
+    font-size: 40px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ span {
+    color: #8D021F;
+}
+h1 span {
+    font-weight: 800;
+}
+ul {
+    list-style: none;
+    margin: 0;
+}
+button {
+    border: none;
+    background: white;
+    cursor: pointer;
+}
+p {
+    color: white;
+    font-size: 25px;
+}
+
+/* Nav start */
+ nav p {
+     color: #2a272a
+ }
+ nav button {
+     padding: 5px 20px;
+     background: none;
+     font-size: 20px;
+     border: #2a272a solid 3px;
+
+     transition: 0.2s ease;
+ }
+nav button:hover {
+    border-radius: 30px;
+}
+/* Nav End */
+
+/* Sections Start */
+
+section {
+    margin:  0;
+    padding: 50px 0;
+
+}
+
+.section-content-wrapper {
+    display: flex;
+}
+.section-space {
+    flex: 1;
+}
+.section-content {
+    flex: 0 0 1000px;    
+    border: 1px dotted black;
+    background: #2a272a;
+    padding: 100px 60px;
+    padding-bottom: 150px;
+    min-height: 1200px;
+}
+
+/* Section x Start */
+.section-x {
+}
+.notice-header {
+    margin-bottom: 30px;
+}
+.notice-body {
+    margin: 30px 0;
+}
+
+.notice-body :nth-child(2){
+    text-align: center;
+    font-size: 35px;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+#date {
+    text-align: right   ;
+}
+.notice-body :nth-child(1){
+    margin-bottom: 30px;
+}
+.notice-body :nth-child(3){
+    margin-bottom: 30px;
+}
+.notice-body :nth-child(4){
+    text-align: justify;
+    line-height: 1.5;
+}
+.body-content::first-letter {
+    font-size: 60px;
+    padding: 5px 30px;
+    float: left;
+    border: white 2px solid;
+    margin-right: 5px;
+}
+.notice-footer {
+    display: flex;
+    height: 250px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+/* Section x end */
+
+/* Sections Send */

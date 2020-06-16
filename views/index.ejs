@@ -120,21 +120,21 @@
                 <div class="section-three-content">
                     <h1>Reviews</h1>
                     <div class="section-three__cards">
+                       <% for (let review of reviews) {%>
                         <div class="section-three__card">
-                            <h2>Avinash</h2>
-                            <p><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i></p>
-                            <h3>"It was a great experience. Hostel Mess is great. most place around the city are easily accessible from hostel"</h3>    
+                            <h2><%= review.fname %> <%= review.lname %></h2>
+                            <span class="stars">
+                                <% for(let j=1; j<= review.rating; j++) { %>
+                                    <i class="material-icons">star</i>
+                                <% } %>
+                                <% for (let j=1; j<=(5- review.rating); j++) { %>
+                                    <i class="material-icons">star_border</i>
+                                <% } %>
+                            </span>
+                            <h3>"<%= review.review %>"</h3>    
                         </div>
-                        <div class="section-three__card">
-                            <h2>Avinash</h2>
-                            <p><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i></p>
-                            <h3>"It was a great experience. Hostel Mess is great. most place around the city are easily accessible from hostel"</h3>    
-                        </div>
-                        <div class="section-three__card">
-                            <h2>Avinash</h2>
-                            <p><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_half</i></p>
-                            <h3>"It was a great experience. Hostel Mess is great. most place around the city are easily accessible from hostel"</h3>    
-                        </div>
+                       <% } %>
+                       
                         
                         
 

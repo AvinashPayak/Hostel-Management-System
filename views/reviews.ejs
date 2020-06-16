@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/reviews.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="nav-wrapper">
+            <div class="nav-space"></div>
+            <div class="main-nav">
+                <div class="main-nav-logo">
+                    <p><i class="material-icons">location_city</i> Gemini Hostel Management system</p>
+                </div>
+                <div class="main-nav-content">
+                    
+                    <ul class="main-nav__items">
+                        <li class="main-nav__item"><a href="">About</a></li>
+                        <li class="main-nav__item"><a href="">gallery</a></li>
+                        <button ><a href="/userhome">BACK</a></button>
+
+                    </ul>
+    
+                </div>
+            </div>
+            <div class="nav-space"></div>
+        </nav>
+    </header>
+    <main>
+        <section class="section-one">
+            <div class="section-content-wrapper">
+                <div class="section-space"></div>
+                <div class="section-content">
+                    <div class="add-review">
+                        <h1>Add review</h1>
+                        <i class="material-icons">add</i>
+                    </div>
+                    <div class="reviews">
+                        <% for (const review of reviews) { %>
+                            <div class="card">
+                                <h2 class="name"><%= review.fname %> <%= review.lname %></h2>
+                                <span class="stars">
+                                    <% for(let j=1; j<= review.rating; j++) { %>
+                                        <i class="material-icons">star</i>
+                                    <% } %>
+                                    <% for (let j=1; j<=(5- review.rating); j++) { %>
+                                        <i class="material-icons">star_border</i>
+                                    <% } %>
+                                </span>
+                                <p> <%= review.review %></p>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="section-space"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Hostel Management System <i class="material-icons">copyright</i></h3>
+        <p>Avinash Payak</p>
+        <p>avinashpayak@gmail.com</p>
+    </footer>
+
+
+</body>
+</html>

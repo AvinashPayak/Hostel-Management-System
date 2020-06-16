@@ -6,7 +6,10 @@ section {
     margin: 10px 0;
     padding: 10px 0;
 }
-
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
 .section-content-wrapper {
     display: flex;
 }
@@ -76,7 +79,7 @@ section {
     border-top: #8D021F 5px solid;
     padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 3px 2px 15px grey;
+    box-shadow: 3px 8px 20px #00000029;
     color: rgb(47, 47, 47);
     display: flex;
     justify-content: space-between;
@@ -94,7 +97,7 @@ section {
 }
 .section-three .section-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;     
 }
  .student, .notice, .laf {
     width: 400px;
@@ -102,19 +105,21 @@ section {
     color: rgb(47, 47, 47);
     height: 60vh;
     overflow-y: auto;
+    box-shadow: 3px 8px 20px #00000029;
+
 }
 .section-three .section-content h3 {
     color: #8D021F;
     font-size: 25px;
     font-weight: 400;
+    
 }
 .student-box {
-    background: rgba(255, 255, 255, 0.7);
-    margin-right: 5px;
-    margin-bottom: 3px;
+    margin-right: 15px;
+    margin-bottom: 10px;
     padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 3px 2px 2px lightgrey;
+    box-shadow: 5px 10px 10px #00000029;
 }
 /* Section three end */
 /* Sections Send */

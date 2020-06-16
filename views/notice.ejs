@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/notice.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-wrapper">
+            <div class="nav-space"></div>
+            <div class="main-nav">
+                <div class="main-nav-logo">
+                    <p><i class="material-icons">location_city</i> Gemini Hostel Management system</p>
+                </div>
+                <div class="main-nav-content">
+                    
+                    <ul class="main-nav__items">
+                       <button><a href="/userhome">BACK</a></button>
+                    </ul>
+    
+                </div>
+            </div>
+            <div class="nav-space"></div>
+        </nav>
+    </header>
+    <main>
+        <section class="section-x">
+            <div class="section-content-wrapper">
+                <div class="section-space"></div>
+                <div class="section-content">
+                    <div class="notice-header">
+                        <h1><span>GEMINI</span> HOSTEL</h1>
+                        <h2><span><i class="material-icons">location_on</i></span>Navi Numbai</h2>
+                    </div>
+                    <hr>
+                    <div class="notice-body">
+                        <p id="date">DATE: <%= notice.noticedate.toString().slice(4, 15) %></p>
+                        <p>NOTICE</p>
+                        <p>SUBJECT: <%= notice.subject %></p>
+                        <p class="body-content"><%= notice.body %></p>
+                    </div>
+                    <div class="notice-footer">
+                        <h3><%= notice.name %></h3>
+                    </div>
+                </div>
+                <div class="section-space"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Hostel Management System <i class="material-icons">copyright</i></h3>
+        <p>Avinash Payak</p>
+        <p>avinashpayak@gmail.com</p>
+    </footer>
+</body>
+</html>

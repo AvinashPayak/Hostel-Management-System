@@ -1,4 +1,6 @@
-const Students = require('../models/students')
+const Students = require('../models/students');
+const Notices = require('../models/notices');
+const Reviews = require('../models/reviews');
 
 exports.getLogin = (req, res, next) => {
     res.render('userlogin');
@@ -26,6 +28,13 @@ exports.postLogin = (req, res, next) => {
     })
 }
 
+exports.postLogout = (req, res, next) => {
+    req.session.destroy((err) => {
+        console.log(err);
+        res.redirect('/login')
+    })
+}
+
 exports.postRegister = (req, res, next) => {
     const fname = req.body.firstname;
     const lname = req.body.lastname;
@@ -34,11 +43,11 @@ exports.postRegister = (req, res, next) => {
     const mobile = req.body.mobile;
     const email = req.body.email;
     const password = req.body.password;
-    console.log(fname, lname, gender, college, mobile, email, password)
+    // console.log(fname, lname, gender, college, mobile, email, password)
     const students = new Students(fname, lname, gender, college, mobile, email, password);
     students.insert().then(result => {
         if(req.url === '/register' && req.method === 'POST'){
-            console.log(result);
+            // console.log(result);
             res.redirect('/login')
         }
     }).catch(err => {
@@ -46,15 +55,43 @@ exports.postRegister = (req, res, next) => {
     })
 }
 
-exports.getUserHome = (req, res, next) => {
-    Students.findByMail(req.session.emailid).then(([student]) => {
-        req.session.regid = student[0].registrationid;
-        res.render('userhome', {
-            student: student[0]
+exports.getReviews = (req, res, next) => {
+    Reviews.findAll().then(([reviews]) => {
+        res.render('reviews', {
+            reviews: reviews
         });
     }).catch()
 }
 
+exports.getUserHome = (req, res, next) => {
+    Students.findByMail(req.session.emailid).then(([student]) => {
+        req.session.regid = student[0].registrationid;
+        Notices.findAll().then(([notices]) => {
+            // console.log(notices);
+            res.render('userhome', {
+                student: student[0],
+                notices: notices
+            });
+        }).catch(err => {
+            console.log(err);
+        })
+    }).catch(err => {
+        console.log(err);
+    })
+}
+
+exports.getNotice = (req, res, next) => {
+    Notices.getNoticeById(req.params.noticeid).then(([notice]) => {
+        res.render('notice', {
+            notice: notice[0]
+        });
+    })
+};
+
 exports.getIndex = (req, res, next) => {
-    res.render('index');
+    Reviews.findAll().then(([reviews]) => {
+        res.render('index', {
+            reviews: reviews
+        })
+    }).catch()
 }

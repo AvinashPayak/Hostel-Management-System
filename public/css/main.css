@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+
 /* General CSS */
 :root {
     --background: #F7FDF6;
@@ -5,11 +7,13 @@
     --secondary: #8D021F;
     --shadow: 3px 3px 10px rgb(53, 53, 156);
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 h1 {
     font-size: 45px;
     color: #8D021F;
@@ -20,7 +24,6 @@ p {
 a {
     text-decoration: none;
     color: inherit;
-    font-size: 18px;
     cursor: pointer;
 }
 button {
@@ -29,11 +32,17 @@ button {
     font: inherit;
     cursor: pointer;
 }
+i {
+    color: #8D021F;
+}
+nav i {
+    color: inherit;
+}
 body {
     /* background: var(--background); */
     color: #333333;
     
-    background: url('../images/texture.jpg');
+    background: var(--background);
     font-family: 'oswald';
 }
 ul {
@@ -45,7 +54,7 @@ header {
     /* position: sticky;
     top: 0; */
     /* background: var(--background); */
-    background: url('../images/texture.jpg');
+    background: var(--background);
     margin: 10px 0;
 }
 .nav-wrapper {
@@ -101,6 +110,7 @@ footer {
     background: #2a272a;
     padding: 30px 0;
     color: white ;
+    z-index: 0;
 }
 footer i {
     vertical-align: bottom;
