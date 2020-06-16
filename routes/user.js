@@ -15,7 +15,9 @@ router.get('/userhome/notice/:noticeid',userController.getNotice);
 
 
 router.post('/register', userController.postRegister);
-router.get('/reviews', userController.getReviews)
+router.get('/reviews', userController.getReviews);
+router.post('/reviews', userController.postReviews)
+
 router.get('/', userController.getIndex);
 
 module.exports = router;

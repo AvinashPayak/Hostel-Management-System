@@ -13,12 +13,20 @@ exports.postLogin = (req, res, next) => {
     student.auth().then(([student]) => {
         if(req.url ==='/login' && req.method === 'POST'){
             if(student[0].present) {
+            Students.findByMail(email).then(([studentdetail]) => {
                 req.session.isLoggedIn=true;
                 req.session.emailid=email;
+                req.session.firstname = studentdetail[0].fname
+                req.session.lastname = studentdetail[0].lname
+                console.log(req.session.lastname)
                 req.session.save(err => {
                     console.log(err);
                     res.redirect('/userhome');
-                })            }
+                }) 
+            }).catch(err => {
+                console.log(err);
+            })               
+            }
             else {
                 res.render('userlogin')
             }
@@ -61,6 +69,9 @@ exports.getReviews = (req, res, next) => {
             reviews: reviews
         });
     }).catch()
+}
+exports.postReviews = (req, res, next) => {
+    res.redirect('/reviews');
 }
 
 exports.getUserHome = (req, res, next) => {

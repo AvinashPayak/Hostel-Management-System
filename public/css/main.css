@@ -7,7 +7,9 @@
     --secondary: #8D021F;
     --shadow: 3px 3px 10px rgb(53, 53, 156);
 }
-
+button:focus {
+    outline: none;
+}
 * {
     box-sizing: border-box;
     margin: 0;
