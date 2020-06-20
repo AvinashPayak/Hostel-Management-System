@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEMINI</title>
+<!-- add icon link -->
+<link rel = "icon" href = "/images/location_city.svg" type = "image/x-icon"> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/adminrooms.css">
+</head>
+<body>
+     <!-- Header Start -->
+ <header>
+    <nav class="nav-wrapper">
+        <div class="nav-space"></div>
+        <div class="main-nav">
+            <div class="main-nav-logo">
+                <p><i class="material-icons">location_city</i> Gemini Hostel Management system</p>
+            </div>
+            <div class="main-nav-content">
+                
+                <ul class="main-nav__items">
+                    <li class="main-nav__item"><a href="">About</a></li>
+                    <li class="main-nav__item"><a href="">gallery</a></li>
+                    <li class="main-nav__item"><a href="">User Registration</a></li>
+                    <li class="main-nav__item"><a href="userlogin.html">User Login</a></li>
+                    <li class="main-nav__item btn-ctn"><i class="material-icons">security</i><a href=""> Admin Login</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="nav-space"></div>
+    </nav>
+</header>
+<!-- Header End -->
+<main>
+<section class="section-x">
+    <div class="section-content-wrapper">
+        <div class="section-space"></div>
+        <div class="section-content">
+            <h1>Rooms</h1>
+            <div class="rooms">   
+                
+                <% for(let room of rooms) { %>
+                <div class="card">
+                    <% if(room.capacity === room.occupied) { %>
+                    <div class="face face-1 full">
+                    <% } else { %>
+                    <div class="face face-1 vacant">
+                     <% } %>
+                        <div class="card-content"> 
+                            <% if(room.capacity === room.occupied) { %>
+                                <h2 class="badge full">FULL</h2>
+                            <% } else { %>
+                                <h2 class="badge vacant"><%= room.capacity - room.occupied %> VACANCY</h2>
+                            <% } %>
+
+                            <p class="heading">ROOM NUMBER: <%= room.roomnumber %></p>
+                            <p class="size">Room Capacity: <%= room.capacity %></p>
+                        </div>
+                    </div>
+                    <div class="face face-2">
+                        <% if(room.occupied != 0) { %>
+                        <div class="card-content">
+                            <%  for(let book of booking) { %>
+                                <% if(book.roomnumber == room.roomnumber) { %>
+                                        <p class="hostelite"><%= book.fname %> <%= book.lname %></p>
+                            <% } else { %>
+                                
+                            <% }%>
+                            <% } %>
+                                <form action="">
+                                    <select name="plan" id="plan"> 
+                                        <option value="none" selected disabled hidden> 
+                                          Add new Hostelite 
+                                      </option> 
+                                      <% for(let nbooked of nonbooked) {  %>
+                                        <option value="<%= nbooked.fk_registrationid_booking %>"> <%= nbooked.fname %> <%= nbooked.lname %></option> 
+                                        <% } %>
+                                    </select>
+                                    <br>
+                                    <button type="submit">Add Hostlite</button>
+                                </form>
+                        </div>
+                        <% } else { %>
+                        <div class="card-content">
+                            <p >Room empty</p>
+                            <form action="">
+                                <select name="plan" id="plan"> 
+                                    <option value="none" selected disabled hidden> 
+                                      Add new Hostelite 
+                                  </option> 
+                                  <% for(let nbooked of nonbooked) {  %>
+                                    <option value="<%= nbooked.fk_registrationid_booking %>"> <%= nbooked.fname %> <%= nbooked.lname %></option> 
+                                    <% } %>
+                                </select>
+                                <br>
+                                <button type="submit">Add Hostlite</button>
+                            </form>
+                        </div>
+                        <% } %>
+                    </div> 
+                </div>
+
+                <% } %>
+
+                
+            </div>
+        </div>
+        <div class="section-space"></div>
+    </div>
+</section>
+</main>
+<footer>
+    <h3>Hostel Management System <i class="material-icons">copyright</i></h3>
+    <p>Avinash Payak</p>
+    <p>avinashpayak@gmail.com</p>
+</footer>
+
+
+</body>
+</html>

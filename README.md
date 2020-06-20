@@ -1,9 +1,8 @@
 # Hostel Management System
-___
+
 ## Project Description
 
-### This project aims to build a website which makes it easier to for admin to manage the hostelites and for the hostelites to manage their profiles along with access to notices and other relevant information
-___
+### This project aims to build a website which makes it easier to for admin to manage the hostelites and for the hostelites to manage their profiles along with access to notices, mess timetable, hostel rules, adding reviews and other relevant information
 
 ## Features
 

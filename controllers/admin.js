@@ -1,6 +1,8 @@
 const Admin = require('../models/admin');
 const Student = require('../models/students');
 const Notice = require('../models/notices');
+const Rooms = require('../models/rooms');
+const Booking = require('../models/booking');
 
 exports.getLogin =  (req, res, next) => {
     console.log(req.session.isLoggedIn)
@@ -34,6 +36,27 @@ exports.postLogout = (req, res, next) => {
     req.session.destroy((err) => {
         console.log(err);
         res.redirect('/login')
+    })
+}
+
+exports.getRooms = (req, res, next) => {
+    Rooms.findAll().then(([rooms]) => {
+       Student.findAll().then(([students]) => {
+        Booking.findAll().then(([booking]) => {
+            Booking.findAllnonbooked().then(([nonbooked]) => {
+                res.render('adminrooms', {
+                    rooms: rooms,
+                    students: students,
+                    booking: booking,
+                    nonbooked: nonbooked
+                });
+            }).catch()
+        })
+       }).catch(err => {
+           console.log(err);
+       });
+    }).catch(err => {
+        console.log(err);
     })
 }
 

@@ -1,0 +1,185 @@
+main {
+    min-height: 100vh;
+}
+
+/* Sections Start */
+
+section {
+    margin: 100px 0;
+    padding: 50px 0;
+}
+
+.section-content-wrapper {
+    display: flex;
+}
+.section-space {
+    flex: 1;
+}
+.section-content {
+    flex: 0 0 1300px;
+}
+
+/* Section x Start */
+.section-x {
+}
+/* Section x end */
+
+/* Sections Send */
+.rooms{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.card{
+    margin: 20px;
+    cursor: pointer;
+    flex: 0 0 300px;
+    min-width: 300px;
+    border-radius: 0.521vw;
+    margin-bottom: 4.688vw;
+
+    /* For animation */
+    /* transition: 0.3s ease; */
+}
+/* .card:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 20px #9797973B;
+} */
+
+.vacant {
+    background: #D21F3C;
+}
+.card-content{
+    padding: 20px;
+}
+.heading{
+    font-size: 30px;
+    line-height: 1;
+    color: #10182F;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    transition: 0.5s ease;
+
+}
+.hostelite{
+    font-size: 18px;
+    line-height: 1;
+    color: #10182F;
+    font-weight: 400;
+    padding: 0;
+
+    transition: 0.5s ease;
+    
+}
+.size{
+    color: #545D7A;
+    font-size: 18px;
+    font-weight: 400;
+
+    transition: 0.5s ease;
+
+}
+.badge h2{
+    margin:0;
+    padding: 0;
+}
+.badge{
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    background: #D21F3C;
+
+    transition: 0.5s ease;
+}
+.badge.vacant{
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 10px;
+    font-weight: 400;
+    border-radius: 5px;
+    color: white;
+    background: green;
+
+    transition: 0.5s ease;
+}
+.card .face {
+    width: 300px;
+    transition: 0.5s;
+}
+
+.card .face.face-1 {
+    background: #F7FDF6;
+    position: relative;
+    display: flex;
+    padding: 30px 0;
+    box-shadow: 3px 5px 20px #9797973B;
+
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100px);
+    z-index: 1;
+}
+.card:hover .face.face-1{
+    transform: translateY(0px);
+}
+.card .face.face-2 {
+    box-shadow: 3px 5px 20px #9797973B;
+    transform: translateY(-100px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 0;
+    
+}
+.card:hover .face.face-1.vacant{
+    background: green;
+}
+.card:hover .face.face-1.full{
+    background: #D21F3C;
+}
+
+.card:hover .heading {
+    color: #F7FDF6;
+}
+.card:hover .size {
+    color: #F7FDF6;
+}
+.card:hover .badge.full {
+    background: #F7FDF6;
+    color: #D21F3C;
+}
+.card:hover .badge.vacant {
+    background: #F7FDF6;
+    color: green;
+}
+.card .face.face-2 button {
+    border: 1px black solid;
+    font-size: 15px;
+    padding: 5px 10px;
+    width: 100%;
+    margin: 20px 0;
+
+    transition: 0.2s ease;
+}
+.card .face.face-2 button:hover {
+    border-radius: 20px;
+}
+.card:hover .face.face-2{
+    transform: translateY(0px);
+    padding: 10px;
+    height: inherit;
+
+}
+.card:hover .face.face-2 .hostelite{
+    padding: 5px 0;
+    margin-bottom: 5px;
+}
