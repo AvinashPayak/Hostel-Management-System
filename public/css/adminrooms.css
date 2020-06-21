@@ -1,5 +1,6 @@
 main {
     min-height: 100vh;
+
 }
 
 /* Sections Start */
@@ -7,6 +8,7 @@ main {
 section {
     margin: 100px 0;
     padding: 50px 0;
+
 }
 
 .section-content-wrapper {
@@ -17,6 +19,7 @@ section {
 }
 .section-content {
     flex: 0 0 1300px;
+
 }
 
 /* Section one Start */
@@ -115,6 +118,7 @@ section {
 .rooms{
     display: flex;
     flex-wrap: wrap;
+    
     
 }
 .card{

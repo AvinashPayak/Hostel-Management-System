@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/room.css">
+
+    <script src="/scripts/studentToRoom.js" defer></script>
+
+</head>
+<body>
+    <template id="modal-template">
+        <div class="backdrop"></div>
+        <div class="review">
+        </div>
+    </template>
+ <template id="modal-content">
+    <button id="close-review"><i class="material-icons">clear</i></button>            
+    <h1>Add Hostelite</h1>
+    <form action="/reviews" method="POST">
+        <select name="plan" id="plan"> 
+            <option value="none" selected disabled hidden> 
+              Select an Option 
+          </option> 
+            <option value="free">Free</option> 
+            <option value="starter">Starter </option> 
+            <option value="professional">Professional</option> 
+            <option value="corporate">Corporate</option> 
+        </select>
+    <br>
+    <button id="submit-review" type="submit">Add Student</button>    
+</form>
+
+ </template>  
+
+    <header>
+        <nav class="nav-wrapper">
+            <div class="nav-space"></div>
+            <div class="main-nav">
+                <div class="main-nav-logo">
+                    <p><i class="material-icons">location_city</i> Gemini Hostel Management system</p>
+                </div>
+                <div class="main-nav-content">
+                    
+                    <ul class="main-nav__items">
+                       <button><a href="/userhome">BACK</a></button>
+                    </ul>
+    
+                </div>
+            </div>
+            <div class="nav-space"></div>
+        </nav>
+    </header>
+<main>
+    <section class="section-one">
+        <div class="section-content-wrapper">
+            <div class="section-space"></div>
+            <div class="section-content">
+                <h1>Room Number: 302 </h1>
+                <table class="hostelites">
+                    <tr>
+                        <th>Name</th>
+                        <th>Mobile</th>
+                    </tr>
+                    <tr>
+                        <td>Avinash Payak</td>
+                        <td>9769264128</td>
+                        <td><i class="material-icons">clear</i></td>
+                    </tr>
+                    <tr>
+                        <td>Sankar Raghuthaman</td>
+                        <td>9769264128</td>
+                        <td><i class="material-icons">clear</i></td>
+                    </tr>
+                    <tr>
+                        <td>Saurabh Rai</td>
+                        <td>9769264128</td>
+                        <td><i class="material-icons">clear</i></td>
+                    </tr>
+                    
+                </table>
+                <button id="showReview">Add Hostelite</button>
+            </div>
+            <div class="section-space"></div>
+        </div>
+    </section>
+    
+</main>
+<footer>
+    <h3>Hostel Management System <i class="material-icons">copyright</i></h3>
+    <p>Avinash Payak</p>
+    <p>avinashpayak@gmail.com</p>
+</footer>
+</body>
+</html>
