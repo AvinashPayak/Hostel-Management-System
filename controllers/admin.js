@@ -59,6 +59,18 @@ exports.getRooms = (req, res, next) => {
         console.log(err);
     })
 }
+exports.postRooms = (req, res, next) => {
+    const roomnumber = req.body.roomnumber;
+    const capacity = req.body.capacity;
+    const price = req.body.price;
+    const rooms = new Rooms(roomnumber, capacity, price, 0, 0);
+    rooms.addRoom().then(() => {
+        res.redirect('rooms');
+    }).catch(err => {
+        console.log(err);
+    })
+
+}
 
 exports.getHome = (req, res, next) => {
     Student.findAll().then(([students]) => {

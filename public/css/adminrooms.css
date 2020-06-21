@@ -23,7 +23,12 @@ section {
 }
 
 /* Section one Start */
-.section-one {
+
+.section-one .section-content > div{
+    width: 100%;
+    display: flex;
+    padding: 0 100px;
+    justify-content: center;
 }
 /* Add Room start */
 .add-room {
@@ -118,13 +123,15 @@ section {
 .rooms{
     display: flex;
     flex-wrap: wrap;
-    
+    margin-bottom: 100px;
+    margin: 10px;
+    padding: 10px;
     
 }
 .card{
     margin: 20px;
     cursor: pointer;
-    flex: 0 0 300px;
+    flex: 0 0 100px;
     min-width: 300px;
     border-radius: 0.521vw;
     margin-bottom: 4.688vw;

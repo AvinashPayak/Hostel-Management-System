@@ -9,7 +9,8 @@ router.post('/login', adminController.postLogin)
 
 router.get('/home', adminController.getHome);
 
-router.get('/rooms', adminController.getRooms )
+router.get('/rooms', adminController.getRooms);
+router.post('/rooms', adminController.postRooms);
 
 router.post('/logout', adminController.postLogout)
 

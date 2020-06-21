@@ -26,7 +26,7 @@
      <template id="modal-content">
         <button id="close-room"><i class="material-icons">clear</i></button>            
         <h1>Add Room</h1>
-        <form action="" method="POST">
+        <form action="/admin/rooms" method="POST">
             <input type="text" name="roomnumber" placeholder="Room No.">
             <br>
             <input type="text" name="price" placeholder="Price">
@@ -72,52 +72,53 @@
                     <i class="material-icons">add</i>
                 </div>
             </button>
-            <div class="rooms">   
-                <% for(let room of rooms) { %>
-                <div class="card">
-                    <% if(room.capacity === room.occupied) { %>
-                    <div class="face face-1 full">
-                    <% } else { %>
-                    <div class="face face-1 vacant">
-                     <% } %>
-                        <div class="card-content"> 
-                            <% if(room.capacity === room.occupied) { %>
-                                <h2 class="badge full">FULL</h2>
-                            <% } else { %>
-                                <h2 class="badge vacant"><%= room.capacity - room.occupied %> VACANCY</h2>
-                            <% } %>
-
-                            <p class="heading">ROOM NUMBER: <%= room.roomnumber %></p>
-                            <p class="size">Room Capacity: <%= room.capacity %></p>
-                        </div>
-                    </div>
-                    <div class="face face-2">
-                        <% if(room.occupied != 0) { %>
-                        <div class="card-content">
-                            <%  for(let book of booking) { %>
-                                <% if(book.roomnumber == room.roomnumber) { %>
-                                        <p class="hostelite"><%= book.fname %> <%= book.lname %></p>
-                            <% } else { %>
-                                
-                            <% }%>
-                            <% } %>
-                                
-                                    <a href=""><button>Add Hostlite</button></a>
-                        </div>
+            <div>
+                <div class="rooms">   
+                    <% for(let room of rooms) { %>
+                    <div class="card">
+                        <% if(room.capacity === room.occupied) { %>
+                        <div class="face face-1 full">
                         <% } else { %>
-                        <div class="card-content">
-                            <p >Room empty</p>
-                                <button>Add Hostlite</button>
+                        <div class="face face-1 vacant">
+                         <% } %>
+                            <div class="card-content"> 
+                                <% if(room.capacity === room.occupied) { %>
+                                    <h2 class="badge full">FULL</h2>
+                                <% } else { %>
+                                    <h2 class="badge vacant"><%= room.capacity - room.occupied %> VACANCY</h2>
+                                <% } %>
+    
+                                <p class="heading">ROOM NUMBER: <%= room.roomnumber %></p>
+                                <p class="size">Room Capacity: <%= room.capacity %></p>
+                            </div>
                         </div>
-                        <% } %>
-                    </div> 
+                        <div class="face face-2">
+                            <% if(room.occupied != 0) { %>
+                            <div class="card-content">
+                                <%  for(let book of booking) { %>
+                                    <% if(book.roomnumber == room.roomnumber) { %>
+                                            <p class="hostelite"><%= book.fname %> <%= book.lname %></p>
+                                <% } else { %>
+                                    
+                                <% }%>
+                                <% } %>
+                                    
+                                        <a href=""><button>Add Hostlite</button></a>
+                            </div>
+                            <% } else { %>
+                            <div class="card-content">
+                                <p >Room empty</p>
+                                    <button>Add Hostlite</button>
+                            </div>
+                            <% } %>
+                        </div> 
+                    </div>
+    
+                    <% } %>  
                 </div>
-
-                <% } %>
-
-                
             </div>
-        </div>
+            </div>
+          
         <div class="section-space"></div>
     </div>
 </section>
