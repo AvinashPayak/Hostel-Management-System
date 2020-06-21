@@ -19,12 +19,99 @@ section {
     flex: 0 0 1300px;
 }
 
-/* Section x Start */
-.section-x {
+/* Section one Start */
+.section-one {
 }
-/* Section x end */
+/* Add Room start */
+.add-room {
+    margin-top: 30px;
+    padding: 20px 50px;
+    display: flex;
+    box-shadow: 3px 5px 20px #00000029;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
 
-/* Sections Send */
+.add-room:hover {
+    transform: scale(1.01);
+    border-radius: 80px;
+
+}
+.add-room i {
+    font-size: 50px;
+    transition: 0.5s ease;
+}
+.add-room:hover i{
+    transform: rotate(180deg);
+}
+
+/* Add Room Modal Start */
+.backdrop {
+    background: black;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 5;
+}
+.room {
+    flex-direction: column;
+    align-items: center;    
+    box-shadow: 3px 8px 20px #00000029;
+    position: fixed;
+    top: 20vh;
+    left: 40vw;
+    padding: 50px;
+    background: #E2E6E0;
+    z-index: 10;
+    
+}
+#close-room {
+    float: right;
+}
+.room  i{ 
+    font-size: 40px;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+.room i:hover {
+    transform: rotate(90deg);
+}
+.room h1 {
+    padding: 20px 0;
+}
+#submit-room {
+    font-size: 25px;
+    font-weight: 500;
+    color: #8D021F;
+    background: inherit;
+    box-shadow: 3px 8px 20px grey;
+    padding: 20px 35px;
+    width: 100%;
+    margin: 20px 0;
+    
+
+    transition: 0.1s ease;
+}
+#submit-room:hover {
+    border-radius: 50px;
+}
+.room input, textarea {
+    width: 500px;
+    padding: 5px;
+    font-size: 20px;
+    margin: 10px 0;
+}
+/* Add Room Modal End */
+
+/* Add Room End */
+
+/* Rooms Start */
 .rooms{
     display: flex;
     flex-wrap: wrap;
@@ -183,3 +270,7 @@ section {
     padding: 5px 0;
     margin-bottom: 5px;
 }
+/* Rooms end */
+/* Section one end */
+
+/* Sections end */

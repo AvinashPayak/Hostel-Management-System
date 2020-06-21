@@ -13,8 +13,29 @@
 
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/adminrooms.css">
+
+    <script src="/scripts/addroom.js" defer></script>
 </head>
 <body>
+    <template id="modal-template">
+        <div class="backdrop"></div>
+        <div class="room">
+        </div>
+    </template>
+    
+     <template id="modal-content">
+        <button id="close-room"><i class="material-icons">clear</i></button>            
+        <h1>Add Room</h1>
+        <form action="" method="POST">
+            <input type="text" name="roomnumber" placeholder="Room No.">
+            <br>
+            <input type="text" name="price" placeholder="Price">
+            <br>
+            <input type="text" name="capacity" placeholder="Capacity">
+            <br>
+            <button id="submit-room" type="submit">Add Room</button>    
+        </form>
+     </template>     
      <!-- Header Start -->
  <header>
     <nav class="nav-wrapper">
@@ -40,13 +61,18 @@
 </header>
 <!-- Header End -->
 <main>
-<section class="section-x">
+<section class="section-one">
     <div class="section-content-wrapper">
         <div class="section-space"></div>
         <div class="section-content">
             <h1>Rooms</h1>
+            <button id="showRoom">
+                <div class="add-room">
+                    <h1>Add Room</h1>
+                    <i class="material-icons">add</i>
+                </div>
+            </button>
             <div class="rooms">   
-                
                 <% for(let room of rooms) { %>
                 <div class="card">
                     <% if(room.capacity === room.occupied) { %>
@@ -75,34 +101,13 @@
                                 
                             <% }%>
                             <% } %>
-                                <form action="">
-                                    <select name="plan" id="plan"> 
-                                        <option value="none" selected disabled hidden> 
-                                          Add new Hostelite 
-                                      </option> 
-                                      <% for(let nbooked of nonbooked) {  %>
-                                        <option value="<%= nbooked.fk_registrationid_booking %>"> <%= nbooked.fname %> <%= nbooked.lname %></option> 
-                                        <% } %>
-                                    </select>
-                                    <br>
-                                    <button type="submit">Add Hostlite</button>
-                                </form>
+                                
+                                    <button>Add Hostlite</button>
                         </div>
                         <% } else { %>
                         <div class="card-content">
                             <p >Room empty</p>
-                            <form action="">
-                                <select name="plan" id="plan"> 
-                                    <option value="none" selected disabled hidden> 
-                                      Add new Hostelite 
-                                  </option> 
-                                  <% for(let nbooked of nonbooked) {  %>
-                                    <option value="<%= nbooked.fk_registrationid_booking %>"> <%= nbooked.fname %> <%= nbooked.lname %></option> 
-                                    <% } %>
-                                </select>
-                                <br>
-                                <button type="submit">Add Hostlite</button>
-                            </form>
+                                <button>Add Hostlite</button>
                         </div>
                         <% } %>
                     </div> 
