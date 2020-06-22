@@ -22,6 +22,15 @@ module.exports = class booking {
     static findAllnonbooked(){
         return db.execute('SELECT * FROM booking WHERE booked = ?',[0]);
     }
+
+    static getRoom(roomnumber) {
+        return db.execute('SELECT * FROM booking WHERE roomnumber = ?', [roomnumber])
+    }
+
+    static bookRoom(roomnumber,regid){
+        return db.execute('UPDATE booking SET roomnumber = ?, booked = 1 WHERE fk_registrationid_booking = ?',[roomnumber, regid]);
+
+    }
   
 
 }

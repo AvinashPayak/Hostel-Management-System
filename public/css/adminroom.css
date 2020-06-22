@@ -43,7 +43,7 @@ section {
 
 
 .hostelites {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
 }
 .hostelites tr:nth-child(even){
@@ -52,7 +52,7 @@ section {
 .hostelites td, .hostelites th {
     padding: 8px;
 }
-tr > td:nth-child(3){
+tr > td:nth-child(2){
     text-align: right;
 }
 td {

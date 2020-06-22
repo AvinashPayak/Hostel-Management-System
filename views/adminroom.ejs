@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/room.css">
+    <link rel="stylesheet" href="/css/adminroom.css">
 
     <script src="/scripts/studentToRoom.js" defer></script>
 
@@ -24,15 +24,15 @@
  <template id="modal-content">
     <button id="close-review"><i class="material-icons">clear</i></button>            
     <h1>Add Hostelite</h1>
-    <form action="/reviews" method="POST">
-        <select name="plan" id="plan"> 
+    <form action="/admin/room" method="POST">
+        <input type="hidden" name="roomnumber" value="<%= roomnumber %>">
+        <select name="ubstudent" id="plan"> 
             <option value="none" selected disabled hidden> 
               Select an Option 
           </option> 
-            <option value="free">Free</option> 
-            <option value="starter">Starter </option> 
-            <option value="professional">Professional</option> 
-            <option value="corporate">Corporate</option> 
+          <%for(let student of nonbooked) {%>
+            <option value="<%= student.fk_registrationid_booking %>"><%= student.fname %> <%= student.lname %></option> 
+            <% } %>
         </select>
     <br>
     <button id="submit-review" type="submit">Add Student</button>    
@@ -63,28 +63,18 @@
         <div class="section-content-wrapper">
             <div class="section-space"></div>
             <div class="section-content">
-                <h1>Room Number: 302 </h1>
+                <h1>Room Number: <%= roomnumber %> </h1>
                 <table class="hostelites">
                     <tr>
                         <th>Name</th>
-                        <th>Mobile</th>
                     </tr>
+                    <% for(let student of roomdetails) { %>
                     <tr>
-                        <td>Avinash Payak</td>
-                        <td>9769264128</td>
+                        <td><%= student.fname %> <%= student.lname %></td>
                         <td><i class="material-icons">clear</i></td>
                     </tr>
-                    <tr>
-                        <td>Sankar Raghuthaman</td>
-                        <td>9769264128</td>
-                        <td><i class="material-icons">clear</i></td>
-                    </tr>
-                    <tr>
-                        <td>Saurabh Rai</td>
-                        <td>9769264128</td>
-                        <td><i class="material-icons">clear</i></td>
-                    </tr>
-                    
+                    <% } %>
+                   
                 </table>
                 <button id="showReview">Add Hostelite</button>
             </div>

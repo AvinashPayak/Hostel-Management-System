@@ -12,6 +12,9 @@ router.get('/home', adminController.getHome);
 router.get('/rooms', adminController.getRooms);
 router.post('/rooms', adminController.postRooms);
 
+router.get('/room/:roomnumber', adminController.getRoom);
+router.post('/room', adminController.postRoom)
+
 router.post('/logout', adminController.postLogout)
 
 module.exports = router;

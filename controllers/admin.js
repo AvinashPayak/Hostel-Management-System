@@ -69,7 +69,39 @@ exports.postRooms = (req, res, next) => {
     }).catch(err => {
         console.log(err);
     })
+}
 
+exports.getRoom = (req, res, next) => {
+    const roomnumber = req.params.roomnumber;
+    console.log(roomnumber);
+    Booking.getRoom(roomnumber).then(([roomdetails]) => {
+       Booking.findAllnonbooked().then(([nonbooked]) =>{
+        res.render('adminroom', {
+            roomdetails: roomdetails,
+            nonbooked: nonbooked,
+            roomnumber: roomnumber
+        } );
+       }).catch((err) => {
+           console.log(err)
+       })
+    }).catch(err => {
+        console.log(err);
+    })
+}
+
+exports.postRoom = (req, res, next) => {
+    const regid = req.body.ubstudent
+    const roomnumber = req.body.roomnumber;
+    console.log(regid, roomnumber);
+    Booking.bookRoom(roomnumber, regid).then(() => {
+        Rooms.increase(roomnumber).then(() => {
+            Rooms.check(roomnumber).then(() => {
+                res.redirect('/admin/rooms');
+            }).catch()
+        }).catch()
+    }).catch(err => {
+        console.log(err);
+    })
 }
 
 exports.getHome = (req, res, next) => {

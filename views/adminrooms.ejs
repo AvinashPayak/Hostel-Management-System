@@ -103,12 +103,12 @@
                                 <% }%>
                                 <% } %>
                                     
-                                        <a href=""><button>Add Hostlite</button></a>
+                                        <a href="/admin/room/<%= room.roomnumber %>"><button>View Details</button></a>
                             </div>
                             <% } else { %>
                             <div class="card-content">
-                                <p >Room empty</p>
-                                    <button>Add Hostlite</button>
+                                <p>Room empty</p>
+                                    <a href="/admin/room/<%= room.roomnumber %>"><button>View Details</button></a>
                             </div>
                             <% } %>
                         </div> 
