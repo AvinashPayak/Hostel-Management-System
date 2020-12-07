@@ -26,23 +26,38 @@
     ### 7. View Gallery
     ### 8. View Mess Timetable
     ### 9. View Hostel rules
-
+# Project Images
+## Landing Page 
 ![plot](./hms/1.png)
+## Landing Page
 ![plot](./hms/2.png)
+## Landing Page
 ![plot](./hms/3.png)
+## Landing Page
 ![plot](./hms/4.png)
+## User Login
 ![plot](./hms/5.png)
+## User Home Page
 ![plot](./hms/6.png)
+## Notice
 ![plot](./hms/7.png)
+## Reviews
 ![plot](./hms/8.png)
+## Add Review
 ![plot](./hms/9.png)
+## Admin Home Page
 ![plot](./hms/10.png)
+## Rooms Page
 ![plot](./hms/11.png)
+## Completely occupied room
 ![plot](./hms/12.png)
+## Room with vacancy
 ![plot](./hms/13.png)
-![plot](./hms/14.png)
+## Room Details
 ![plot](./hms/15.png)
+## Assigning rooms to hostelite
 ![plot](./hms/16.png)
-
+## Add new room
+![plot](./hms/14.png)
 
      
