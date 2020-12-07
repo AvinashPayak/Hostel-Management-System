@@ -27,5 +27,22 @@
     ### 8. View Mess Timetable
     ### 9. View Hostel rules
 
+![plot](./hms/1.png)
+![plot](./hms/2.png)
+![plot](./hms/3.png)
+![plot](./hms/4.png)
+![plot](./hms/5.png)
+![plot](./hms/6.png)
+![plot](./hms/7.png)
+![plot](./hms/8.png)
+![plot](./hms/9.png)
+![plot](./hms/10.png)
+![plot](./hms/11.png)
+![plot](./hms/12.png)
+![plot](./hms/13.png)
+![plot](./hms/14.png)
+![plot](./hms/15.png)
+![plot](./hms/16.png)
+
 
      
